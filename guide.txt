@@ -1,7 +1,10 @@
+************Basic Commands*********
 source venv/bin/activate   to activate
 deactivate                 to deactivate
 sudo rm -r ./venv          to delete folder venv with root owner
 
+
+************Guidelines**************
 python3 -m venv venv        to create venv
 source venv/bin/activate    to activate venv
 pip install django          to install django
