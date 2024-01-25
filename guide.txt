@@ -14,3 +14,14 @@ go to core > setting.py add "store" into INSTALLED_APPS = []
 go to store/models.py add model for tables in database
 python3 manage.py makemigrations to create db.sqlite3 which defined in store/models.py
 python3 manage.py migrate to build model in database
+create "media" folder
+go to core/setting.py add   MEDIA_URL = '/media/'                         
+                            MEDIA_ROOT = os.path.join(BASE_DIR,'media/')      
+                            this is to configure 'image/' in core/setting.py into media folder
+go to core/urls.py add      if settings.DEBUG:
+                                urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                            this is to show bug 
+go to store/admin.py create class CatagoryAdmin, ProductAdmin
+python3 manage.py createsuperuser   to create admin with username = admin and password = 1234
+python3 manga.py runserver
+                            
