@@ -23,5 +23,21 @@ go to core/urls.py add      if settings.DEBUG:
                             this is to show bug 
 go to store/admin.py create class CatagoryAdmin, ProductAdmin
 python3 manage.py createsuperuser   to create admin with username = admin and password = 1234
-python3 manga.py runserver
+python3 manage.py runserver
+
+
+
+go to core/url.py to add   path('', include('store.urls', namespace='store')), to link to store/urls.py
+create store/urls.py file
+
+go to store/urls.py add     from . import views
+                            app_name = 'store'
+                            urlpatterns=[path('', views.all_products, name='all_products'),]
+
+go to store/views  to define def all_products
+create templates folder > store folder > home.html file
+go to core/settings.py > TEMPLATES = [...]  add 'DIRS': [BASE_DIR / 'templates'],
+
+
+
                             
