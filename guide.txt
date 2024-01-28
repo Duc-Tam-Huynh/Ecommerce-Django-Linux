@@ -37,6 +37,7 @@ go to store/urls.py add     from . import views
 go to store/views  to define def all_products
 create templates folder > store folder > home.html file
 go to core/settings.py > TEMPLATES = [...]  add 'DIRS': [BASE_DIR / 'templates'],
+in html file div tag with class="container-fluid" mean the container will be be width
 
 
 
