@@ -55,6 +55,8 @@ to build the Category section
 go to store > models.py add def get_absolute_url() in class Category
 add path('search/<slug:category_slug>/', views.category_list, name='category_list') in store > urls.py > urlpatterns =[...]
 
+2h
+
 
 
                             
