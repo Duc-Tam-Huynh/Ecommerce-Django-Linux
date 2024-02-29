@@ -41,6 +41,10 @@ in html file div tag with class="container-fluid" mean the container will be be 
 
 part 1, 1h40
 
+to create single page for each item
+go to store > url.py add path('item/<slug:slug>/', views.product_detail, name='product_detail') into urlpatterns =[...]
+go to store > views.py add def product_detail() and add library "from django.shortcuts import get_object_or_404"
 
+create "products" folder in store templates/store folder, and then create detail.html
 
                             
