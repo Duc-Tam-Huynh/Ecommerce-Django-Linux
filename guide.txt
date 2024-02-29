@@ -47,4 +47,14 @@ go to store > views.py add def product_detail() and add library "from django.sho
 
 create "products" folder in store templates/store folder, and then create detail.html
 
+to build dynamic link for each product
+go to store > models.py add def get_absolute_url() in class Product
+go to detail.html add <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{product.title }}</a>
+
+to build the Category section
+go to store > models.py add def get_absolute_url() in class Category
+add path('search/<slug:category_slug>/', views.category_list, name='category_list') in store > urls.py > urlpatterns =[...]
+
+
+
                             
